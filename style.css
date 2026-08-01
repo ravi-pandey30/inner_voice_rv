@@ -190,6 +190,33 @@ body {
 }
 .section-title span { color: var(--ink-dim); font-size: 1rem; font-weight: 400; }
 
+/* ---------- filter pills ---------- */
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: -14px 0 40px;
+}
+.pill {
+  background: none;
+  border: 1px solid rgba(239, 230, 216, 0.18);
+  color: var(--ink-dim);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.82rem;
+  padding: 7px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.pill:hover { border-color: rgba(201, 162, 75, 0.5); color: var(--ink); }
+.pill.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--bg);
+  font-weight: 500;
+}
+.poem.hidden { display: none; }
+
 /* ---------- deewan / poems ---------- */
 .deewan { padding: 40px 0 80px; }
 
@@ -221,15 +248,19 @@ body {
 }
 .poem-head {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 12px;
   margin-bottom: 6px;
+  flex-wrap: wrap;
 }
-.poem-number {
-  font-family: 'Noto Serif Devanagari', serif;
-  color: var(--gold);
-  font-size: 0.85rem;
-  opacity: 0.7;
+.poem-category {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  color: var(--maroon);
+  border: 1px solid rgba(140, 47, 47, 0.4);
+  padding: 2px 10px;
+  border-radius: 999px;
 }
 .poem-date {
   font-family: 'Poppins', sans-serif;
@@ -274,6 +305,32 @@ body {
 .share-btn:hover, .share-btn:focus-visible { border-color: var(--gold); color: var(--gold); }
 .share-btn.copied { color: var(--maroon); border-color: var(--maroon); }
 
+.poem-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+.like-btn {
+  background: none;
+  border: 1px solid rgba(239, 230, 216, 0.18);
+  color: var(--ink-dim);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.82rem;
+  padding: 7px 16px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.like-btn:hover { border-color: rgba(140, 47, 47, 0.5); }
+.like-btn:active { transform: scale(0.95); }
+.like-btn.liked { color: var(--maroon); border-color: rgba(140, 47, 47, 0.5); }
+.like-count { font-variant-numeric: tabular-nums; opacity: 0.85; }
+
 /* ---------- ad slot ---------- */
 .ad-slot {
   margin: 48px 0;
@@ -286,6 +343,12 @@ body {
 
 /* ---------- about / footer ---------- */
 .about { padding: 20px 0 70px; color: var(--ink-dim); }
+.about p { margin: 0 0 16px; }
+.about-highlight {
+  font-family: 'Poppins', sans-serif;
+  color: var(--gold);
+  font-weight: 600;
+}
 .site-footer {
   border-top: 1px solid rgba(201, 162, 75, 0.15);
   padding: 30px 0 50px;
