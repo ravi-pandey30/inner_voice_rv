@@ -1,3 +1,20 @@
+// language toggle (Hindi Devanagari / English Roman)
+const langButtons = document.querySelectorAll('.lang-btn');
+const savedLang = localStorage.getItem('site-lang');
+if (savedLang === 'en') {
+  document.body.classList.add('lang-en-active');
+  langButtons.forEach(b => b.classList.toggle('active', b.dataset.lang === 'en'));
+}
+langButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const lang = btn.dataset.lang;
+    langButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.body.classList.toggle('lang-en-active', lang === 'en');
+    localStorage.setItem('site-lang', lang);
+  });
+});
+
 // like buttons — uses free CounterAPI (api.counterapi.dev) so likes are
 // real and visible to everyone, not just stored on one device
 const LIKE_NAMESPACE = 'inner-voice-rv-ravi';

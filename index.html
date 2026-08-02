@@ -88,12 +88,19 @@
   NAYI SHAYARI ADD KARNE KE LIYE:
   Neeche jo <article class="poem"> block hai, use copy karke paste kar dein.
   Badalna hai: article tag me data-category ("ishq" / "dard" / "zindagi"),
-  poem-category label (इश्क़ / दर्द-ए-दिल / ज़िंदगी), poem-date, poem-title,
-  poem-body, aur teeno jagah (id, data-poem x2) unique number (poem-23, poem-24...).
+  poem-category label (इश्क़ / दर्द-ए-दिल / ज़िंदगी), poem-date, poem-title
+  (lang-hi aur lang-en dono, do alag h3 lines), poem-body (lang-hi aur
+  lang-en dono, do alag p lines), aur teeno jagah (id, data-poem x2)
+  unique number (poem-23, poem-24...).
 -->
 <main id="deewan" class="deewan">
   <div class="wrap">
     <h2 class="section-title">दीवान <span>— सारी शायरी</span></h2>
+
+    <div class="lang-toggle" role="group" aria-label="भाषा चुनें">
+      <button class="lang-btn active" data-lang="hi">हिंदी</button>
+      <button class="lang-btn" data-lang="en">English</button>
+    </div>
 
     <div class="filter-pills" role="tablist" aria-label="शायरी की श्रेणियाँ">
       <button class="pill active" data-filter="all">सभी</button>
@@ -108,8 +115,9 @@
         <span class="poem-category">ज़िंदगी</span>
         <p class="poem-date">३० जुलाई</p>
       </div>
-      <h3 class="poem-title">नया शहर</h3>
-      <p class="poem-body">ये नया शहर लगता बड़ा सुना है,<br>
+      <h3 class="poem-title lang-hi">नया शहर</h3>
+      <h3 class="poem-title lang-en">Naya Shahar</h3>
+      <p class="poem-body lang-hi">ये नया शहर लगता बड़ा सुना है,<br>
       क्या ख़्वाहिशें थी न जाने क्या रास्ता चुना है।<br>
       और शायद भूल भी चुका हूँ अपनी हर एक ख़्वाहिश,<br>
       ख़ैर कौनसा ज़िम्मेदार शख़्स अपने मन की कभी सुना है...<br><br>
@@ -119,6 +127,16 @@
       आसमान को घर बताने वाला मैं तो ज़मीन पे डर रहा हूँ,<br><br>
       नसीब में होगा तो जो चाहा है ज़रूर होगा,<br>
       मेरा न सही पर किसी का तो होगा...</p>
+      <p class="poem-body lang-en">Ye naya shahar lagta bada suna hai,<br>
+      Kya khwahishein thi na jaane kya rasta chuna hai.<br><br>
+      Aur shayad bhool bhi chuka hoon apni har ek khwahish,<br>
+      Khair konsa zimmedar shaks apne mann ki kabhi suna hai...<br><br>
+      Pyar-pyar, dost-wost sab peeche chhod aaya hoon,<br>
+      Gharwalon ke khushi khatir khudko peeche chhod aaya hoon.<br><br>
+      Manzil kuch aur thi kar main kuch aur raha hoon,<br>
+      Aasman ko ghar bataane wala main toh zameen pe darr raha hoon,<br><br>
+      Naseeb mein hoga toh jo chaha hai zaroor hoga,<br>
+      Mera na sahi par kisi ka toh hoga...</p>
       <div class="poem-actions">
         <button class="share-btn" data-poem="poem-4">शेयर करें ⤴</button>
         <button class="like-btn" data-poem="poem-4" aria-label="पसंद करें"><span class="heart">🤍</span> <span class="like-count">···</span></button>
@@ -135,8 +153,9 @@
         <span class="poem-category">दर्द-ए-दिल</span>
         <p class="poem-date">१ अगस्त</p>
       </div>
-      <h3 class="poem-title">बदलती नज़रें</h3>
-      <p class="poem-body">अब खटकने लगे हैं क्या तुम्हारी नज़रों में हम,<br>
+      <h3 class="poem-title lang-hi">बदलती नज़रें</h3>
+      <h3 class="poem-title lang-en">Badalti Nazrein</h3>
+      <p class="poem-body lang-hi">अब खटकने लगे हैं क्या तुम्हारी नज़रों में हम,<br>
       सारी रौनकें क्या मेरे चेहरे पर ही चली गईं,<br><br>
       दब क्या गए हम अपनी ज़िम्मेदारियों के बोझ तले...<br>
       सारी मोहब्बत तुम्हारी उतर गई...<br><br>
@@ -144,6 +163,14 @@
       वो लड़की जो मुझसे प्यार करती थी वो तू नहीं है मुझे बता वो कब और किधर गई...<br><br>
       और संजोके रखा था मैंने तुझे सारी बुरी बलाओं से,<br>
       वो रक़ीब के ज़हन में तुम ख़ुद-ब-ख़ुद उतर गई...</p>
+      <p class="poem-body lang-en">Ab khatakne lage hain kya tumhari nazron mein hum,<br>
+      Saari raunakein kya mere chehre par hi chali gayin,<br><br>
+      Dab kya gaye hum apni zimmedariyon ke bojh tale...<br>
+      Saari mohabbat tumhari utar gayi...<br><br>
+      Meri mohabbat ko tum na jaane kya samajhti aayi ho,<br>
+      Wo ladki jo mujhse pyar karti thi wo tu nahi hai mujhe bata wo kab aur kidhar gayi...<br><br>
+      Aur sanjoke rakha tha maine tujhe saari buri balaon se,<br>
+      Wo rakib ke zehan mein tum khud-ba-khud utar gayi...</p>
       <div class="poem-actions">
         <button class="share-btn" data-poem="poem-5">शेयर करें ⤴</button>
         <button class="like-btn" data-poem="poem-5" aria-label="पसंद करें"><span class="heart">🤍</span> <span class="like-count">···</span></button>
@@ -160,12 +187,18 @@
         <span class="poem-category">दर्द-ए-दिल</span>
         <p class="poem-date">१ अगस्त</p>
       </div>
-      <h3 class="poem-title">रहा नहीं जाता</h3>
-      <p class="poem-body">मोहब्बत का ये ज़ुल्म सहा नहीं जाता,<br>
+      <h3 class="poem-title lang-hi">रहा नहीं जाता</h3>
+      <h3 class="poem-title lang-en">Raha Nahi Jaata</h3>
+      <p class="poem-body lang-hi">मोहब्बत का ये ज़ुल्म सहा नहीं जाता,<br>
       तुमसे मिले बिना अब मुझसे रहा नहीं जाता...<br><br>
       दूरियों की ख़बर पहले से ही थी हमें,<br>
       मगर अब इन दूरियों की घुटन में घुटा नहीं जाता...<br><br>
       तुमसे मिले बिना मुझसे अब रहा नहीं जाता...</p>
+      <p class="poem-body lang-en">Mohabbat ka ye zulm saha nahi jaata,<br>
+      Tumse mile bina ab mujhse raha nahi jaata...<br><br>
+      Duriyon ki khabar pehle se hi thi humein,<br>
+      Magar ab in duriyon ki ghutan mein ghuta nahi jaata...<br><br>
+      Tumse mile bina mujhse ab raha nahi jaata...</p>
       <div class="poem-actions">
         <button class="share-btn" data-poem="poem-6">शेयर करें ⤴</button>
         <button class="like-btn" data-poem="poem-6" aria-label="पसंद करें"><span class="heart">🤍</span> <span class="like-count">···</span></button>
@@ -182,14 +215,22 @@
         <span class="poem-category">दर्द-ए-दिल</span>
         <p class="poem-date">१ अगस्त</p>
       </div>
-      <h3 class="poem-title">इल्ज़ाम</h3>
-      <p class="poem-body">कोई कितना ही समझता मुझे,<br>
+      <h3 class="poem-title lang-hi">इल्ज़ाम</h3>
+      <h3 class="poem-title lang-en">Ilzaam</h3>
+      <p class="poem-body lang-hi">कोई कितना ही समझता मुझे,<br>
       शायद इसलिए ही पराया कर दिया...<br><br>
       जितने भी समय के लिए जो कोई भी था दिल में,<br>
       बेइज़्ज़ती करके किराया भर दिया...<br><br>
       इल्ज़ाम था मुझपर कि मैं समझाता नहीं,<br>
       नासमझ वो मुझे न समझ कर,<br>
       जाते-जाते ही सही मगर मुझे उस इल्ज़ाम से मुक्त कर गया...</p>
+      <p class="poem-body lang-en">Koi kitna hi samajhta mujhe,<br>
+      Shayad isliye hi paraya kar diya...<br><br>
+      Jitne bhi samay ke liye jo koi bhi tha dil mein,<br>
+      Beizzati karke kiraya bhar diya...<br><br>
+      Ilzaam tha mujhpar ki main samjhata nahi,<br>
+      Nasamajh wo mujhe na samajh kar,<br>
+      Jaate-jaate hi sahi magar mujhe us ilzaam se mukt kar gaya...</p>
       <div class="poem-actions">
         <button class="share-btn" data-poem="poem-7">शेयर करें ⤴</button>
         <button class="like-btn" data-poem="poem-7" aria-label="पसंद करें"><span class="heart">🤍</span> <span class="like-count">···</span></button>
@@ -206,11 +247,16 @@
         <span class="poem-category">इश्क़</span>
         <p class="poem-date">१ अगस्त</p>
       </div>
-      <h3 class="poem-title">चाँद और वो चेहरा</h3>
-      <p class="poem-body">मैं चाँद को देखूँ तो कुछ याद आने लगता है...<br>
+      <h3 class="poem-title lang-hi">चाँद और वो चेहरा</h3>
+      <h3 class="poem-title lang-en">Chaand Aur Wo Chehra</h3>
+      <p class="poem-body lang-hi">मैं चाँद को देखूँ तो कुछ याद आने लगता है...<br>
       ज़ेहन में छुपा वो चेहरा आँखों के सामने आने लगता है...<br><br>
       लगता है कि कहीं खो तज़्किरों में उसकी,<br>
       फिर मुझे मेरा ईमान याद आने लगता है...</p>
+      <p class="poem-body lang-en">Main chaand ko dekhoon toh kuch yaad aane lagta hai...<br>
+      Zehen mein chhupa wo chehra aankhon ke samne aane lagta hai...<br><br>
+      Lagta hai ki kahin kho tazkiron mein uski,<br>
+      Phir mujhe mera imaan yaad aane lagta hai...</p>
       <div class="poem-actions">
         <button class="share-btn" data-poem="poem-8">शेयर करें ⤴</button>
         <button class="like-btn" data-poem="poem-8" aria-label="पसंद करें"><span class="heart">🤍</span> <span class="like-count">···</span></button>
@@ -227,12 +273,18 @@
         <span class="poem-category">ज़िंदगी</span>
         <p class="poem-date">१ अगस्त</p>
       </div>
-      <h3 class="poem-title">दुनिया का दस्तूर</h3>
-      <p class="poem-body">सच्चाइयों को थोड़ा छुपाना भी आना चाहिए,<br>
+      <h3 class="poem-title lang-hi">दुनिया का दस्तूर</h3>
+      <h3 class="poem-title lang-en">Duniya Ka Dastoor</h3>
+      <p class="poem-body lang-hi">सच्चाइयों को थोड़ा छुपाना भी आना चाहिए,<br>
       झूठ का सहारा लेकर बातें बताना भी आना चाहिए,<br><br>
       ये दुनिया बड़ी ज़ालिम है मेरे दोस्त,<br>
       खुदका छोड़ दूसरों का सोचोगे तो एक दिन बर्बाद हो जाओगे,<br><br>
       मेरी मानो तो दिल दुखाने का हुनर भी तुम्हें आना चाहिए...</p>
+      <p class="poem-body lang-en">Sachchaiyon ko thoda chhupana bhi aana chahiye,<br>
+      Jhooth ka sahara lekar baatein bataana bhi aana chahiye,<br><br>
+      Ye duniya badi zaalim hai mere dost,<br>
+      Khudka chhod dusron ka sochoge toh ek din barbaad ho jaoge,<br><br>
+      Meri maano toh dil dukhaane ka hunar bhi tumhein aana chahiye...</p>
       <div class="poem-actions">
         <button class="share-btn" data-poem="poem-9">शेयर करें ⤴</button>
         <button class="like-btn" data-poem="poem-9" aria-label="पसंद करें"><span class="heart">🤍</span> <span class="like-count">···</span></button>
@@ -249,13 +301,20 @@
         <span class="poem-category">दर्द-ए-दिल</span>
         <p class="poem-date">१ अगस्त</p>
       </div>
-      <h3 class="poem-title">अँधेरा पन</h3>
-      <p class="poem-body">अँधेरापन मुझे रास आने लगा है,<br>
+      <h3 class="poem-title lang-hi">अँधेरा पन</h3>
+      <h3 class="poem-title lang-en">Andhera Pan</h3>
+      <p class="poem-body lang-hi">अँधेरापन मुझे रास आने लगा है,<br>
       बदलते मौसम जैसा सब बदलने जो लगा है।<br><br>
       साफ़ पानी सा रिश्ता हुआ करता था कभी सबसे,<br>
       अब जेब में हर कोई रंग रखने लगा है।<br><br>
       उजालों में मुझे पहले सब अपने दिखाई देते थे,<br>
       हवाओं का रुख़ क्या बदला अब मुझे सबका सच दिखाई देने लगा है।</p>
+      <p class="poem-body lang-en">Andhera pan mujhe raas aane laga hai,<br>
+      Badalte mausam jaisa sab badalne jo laga hai.<br><br>
+      Saaf paani sa rishta hua karta tha kabhi sabse,<br>
+      Ab jeb mein har koi rang rakhne laga hai.<br><br>
+      Ujaalon mein mujhe pehle sab apne dikhai dete the,<br>
+      Hawaon ka rukh kya badla ab mujhe sabka sach dikhai dene laga hai.</p>
       <div class="poem-actions">
         <button class="share-btn" data-poem="poem-10">शेयर करें ⤴</button>
         <button class="like-btn" data-poem="poem-10" aria-label="पसंद करें"><span class="heart">🤍</span> <span class="like-count">···</span></button>
@@ -272,13 +331,20 @@
         <span class="poem-category">दर्द-ए-दिल</span>
         <p class="poem-date">१ अगस्त</p>
       </div>
-      <h3 class="poem-title">बेहिसाब माँग</h3>
-      <p class="poem-body">वो छोड़ जाने की बातें कर रहे हैं,<br>
+      <h3 class="poem-title lang-hi">बेहिसाब माँग</h3>
+      <h3 class="poem-title lang-en">Behisaab Maang</h3>
+      <p class="poem-body lang-hi">वो छोड़ जाने की बातें कर रहे हैं,<br>
       वो जो ठीक से कभी आए भी नहीं थे...<br><br>
       एक लाल जोड़ा और कुछ पैसों संग भेजी गई थी वो,<br>
       क़ीमती चीज़ यानी दिल तो वो संग लाए ही नहीं थे...<br><br>
       और माँग रखी जा रही है बेहिसाब पैसों की उतने,<br>
       जितने उनके पूरे ख़ानदान ने मिलकर कमाए नहीं थे...</p>
+      <p class="poem-body lang-en">Wo chhod jaane ki baatein kar rahe hain,<br>
+      Wo jo theek se kabhi aaye bhi nahi the...<br><br>
+      Ek laal joda aur kuch paison sang bheji gayi thi wo,<br>
+      Kimati cheez yaani dil toh wo sang laaye hi nahi the...<br><br>
+      Aur maang rakhi ja rahi hai behisaab paison ki utne,<br>
+      Jitne unke pure khandan ne milkar kamaye nahi the...</p>
       <div class="poem-actions">
         <button class="share-btn" data-poem="poem-11">शेयर करें ⤴</button>
         <button class="like-btn" data-poem="poem-11" aria-label="पसंद करें"><span class="heart">🤍</span> <span class="like-count">···</span></button>
@@ -295,13 +361,20 @@
         <span class="poem-category">ज़िंदगी</span>
         <p class="poem-date">१ अगस्त</p>
       </div>
-      <h3 class="poem-title">अपनी औक़ात पर</h3>
-      <p class="poem-body">तुम ज़मीन पर कर रहे थे इंतज़ार मेरा,<br>
+      <h3 class="poem-title lang-hi">अपनी औक़ात पर</h3>
+      <h3 class="poem-title lang-en">Apni Aukaat Par</h3>
+      <p class="poem-body lang-hi">तुम ज़मीन पर कर रहे थे इंतज़ार मेरा,<br>
       और देखो मैं फ़लक तक आ गया हूँ...<br><br>
       मतलबी लोगों के बीच में रहा हूँ,<br>
       देखो मैं भी अब मतलब पर आ गया हूँ...<br><br>
       और ये तुम्हें मेरी सफलता का ग़ुरूर लग रहा है तो ग़ुरूर ही सही,<br>
       औक़ात की बात की थी न, लो मैं अपनी औक़ात पर आ गया हूँ...</p>
+      <p class="poem-body lang-en">Tum zameen par kar rahe the intezar mera,<br>
+      Aur dekho main falak tak aa gaya hoon...<br><br>
+      Matlabi logon ke beech mein raha hoon,<br>
+      Dekho main bhi ab matlab par aa gaya hoon...<br><br>
+      Aur ye tumhein meri safalta ka guroor lag raha hai toh guroor hi sahi,<br>
+      Aukaat ki baat ki thi na, lo main apni aukaat par aa gaya hoon..</p>
       <div class="poem-actions">
         <button class="share-btn" data-poem="poem-12">शेयर करें ⤴</button>
         <button class="like-btn" data-poem="poem-12" aria-label="पसंद करें"><span class="heart">🤍</span> <span class="like-count">···</span></button>
@@ -318,8 +391,9 @@
         <span class="poem-category">दर्द-ए-दिल</span>
         <p class="poem-date">१ अगस्त</p>
       </div>
-      <h3 class="poem-title">अपरम्पार</h3>
-      <p class="poem-body">अब बीच का कुछ नहीं रहेगा,<br>
+      <h3 class="poem-title lang-hi">अपरम्पार</h3>
+      <h3 class="poem-title lang-en">Aparampaar</h3>
+      <p class="poem-body lang-hi">अब बीच का कुछ नहीं रहेगा,<br>
       ग़ुस्सा अपरम्पार रहेगा या बहुत ज़्यादा प्यार रहेगा...<br><br>
       सहनशक्तियों को छुट्टी दे दी है मैंने,<br>
       तो ज़हर भरी बातों का जवाब ज़हर से भरा ही मिलेगा...<br><br>
@@ -327,6 +401,14 @@
       ज़मीन पर ज़मीर बेचे हुए लोगों का ही साथ मिलेगा...<br><br>
       और मिलेगा नफ़रत भरे दिलों में प्यार भरी बोली,<br>
       तू कितना भी अच्छा करले पर तुझे प्यार नहीं मिलेगा...</p>
+      <p class="poem-body lang-en">Ab beech ka kuch nahi rahega,<br>
+      Gussa aparampaar rahega ya bahut zyada pyar rahega...<br><br>
+      Sahanshaktiyon ko chhutti de di hai maine,<br>
+      Toh zehar bhari baaton ka jawab zehar se bhara hi milega...<br><br>
+      Parinde tu ab par faila aur udd ja,<br>
+      Zameen par zameer beche hue logon ka hi saath milega...<br><br>
+      Aur milega nafrat bhare dilon mein pyar bhari boli,<br>
+      Tu kitna bhi achha kar le par tujhe pyar nahi milega...</p>
       <div class="poem-actions">
         <button class="share-btn" data-poem="poem-13">शेयर करें ⤴</button>
         <button class="like-btn" data-poem="poem-13" aria-label="पसंद करें"><span class="heart">🤍</span> <span class="like-count">···</span></button>
@@ -343,8 +425,9 @@
         <span class="poem-category">ज़िंदगी</span>
         <p class="poem-date">१ अगस्त</p>
       </div>
-      <h3 class="poem-title">हद समय तय करता है</h3>
-      <p class="poem-body">दीवानगी की हद कौन तय करता है,<br>
+      <h3 class="poem-title lang-hi">हद समय तय करता है</h3>
+      <h3 class="poem-title lang-en">Had Samay Tay Karta Hai</h3>
+      <p class="poem-body lang-hi">दीवानगी की हद कौन तय करता है,<br>
       कौन किसका कबतक है इसकी हद समय तय करता है...<br><br>
       अमीर हो या ग़रीब उदासियों ने उन्हें घेर रखा है,<br>
       प्यार, मोहब्बत लफ़्ज़ों में ही ठीक है हक़ीक़त में ये चीज़ें ज़माना तय करता है...<br><br>
@@ -354,6 +437,16 @@
       जो मिल जाए कोई दूसरा अच्छा तो पहले वाले को छोड़ने में यहाँ किसे फ़र्क़ पड़ता है...<br><br>
       जो तुम्हारा है वो सिर्फ़ तुम्हारा रहेगा कोई कह नहीं सकता,<br>
       ये ज़माना पल-पल में अपनी औक़ात बदलते रहता है...</p>
+      <p class="poem-body lang-en">Deewangi ki had kaun tay karta hai,<br>
+      Kaun kiska kabtak hai iski had samay tay karta hai...<br><br>
+      Ameer ho ya gareeb udaasiyon ne unhe gher rakha hai,<br>
+      Pyar, mohabbat lafzon mein hi theek hai haqeeqat mein ye cheezein zamana tay karta hai...<br><br>
+      Khoobsurati surat aur shareer se nahi hoti mere dost,<br>
+      Khoobsurati tumhari seerat tay karta hai...<br><br>
+      Aur tootte nahi hain rishte unhe todna padta hai,<br>
+      Jo mil jaaye koi dusra achha toh pehle wale ko chhodne mein yaha kise fark padta hai...<br><br>
+      Jo tumhara hai wo sirf tumhara rahega koi keh nahi sakta,<br>
+      Ye zamana pal-pal mein apni aukaat badalte rehta hai...</p>
       <div class="poem-actions">
         <button class="share-btn" data-poem="poem-14">शेयर करें ⤴</button>
         <button class="like-btn" data-poem="poem-14" aria-label="पसंद करें"><span class="heart">🤍</span> <span class="like-count">···</span></button>
@@ -370,13 +463,20 @@
         <span class="poem-category">इश्क़</span>
         <p class="poem-date">१ अगस्त</p>
       </div>
-      <h3 class="poem-title">तेरे जैसा कोई नहीं</h3>
-      <p class="poem-body">जो मोहब्बत तुझसे हुई है वो दोबारा किसी और से कैसे हो सकती है,<br>
+      <h3 class="poem-title lang-hi">तेरे जैसा कोई नहीं</h3>
+      <h3 class="poem-title lang-en">Tere Jaisa Koi Nahi</h3>
+      <p class="poem-body lang-hi">जो मोहब्बत तुझसे हुई है वो दोबारा किसी और से कैसे हो सकती है,<br>
       मैं तो मैं जैसा रह लूँगा पर कोई दूसरी तेरे जैसे कैसे हो सकती है...<br><br>
       नामुमकिन है तेरे जैसा कोई मुझे संभाल पाए,<br>
       कोई जन्नत की हूर भी मेरा होना चाहे तो नहीं हो सकती है...🫂<br><br>
       प्यार में अहम है प्यार देते रहना,<br>
       और वो बस मुझे तू ही दे सकती है 💝</p>
+      <p class="poem-body lang-en">Jo mohabbat tujhse hui hai wo dobara kisi aur se kaise ho sakti hai,<br><br>
+      Main toh main jaisa reh loonga par koi dusri tere jaise kaise ho sakti hai..<br><br>
+      Na-mumkin hai tere jaisa koi mujhe sambhal paaye,<br>
+      Koi jannat ki hoor bhi mera hona chahe toh nahi ho sakti hai...🫂<br><br>
+      Pyar mein aham hai pyar dete rehna,<br>
+      Aur wo bas mujhe tu hi de sakti hai 💝</p>
       <div class="poem-actions">
         <button class="share-btn" data-poem="poem-15">शेयर करें ⤴</button>
         <button class="like-btn" data-poem="poem-15" aria-label="पसंद करें"><span class="heart">🤍</span> <span class="like-count">···</span></button>
@@ -393,13 +493,20 @@
         <span class="poem-category">इश्क़</span>
         <p class="poem-date">१ अगस्त</p>
       </div>
-      <h3 class="poem-title">ज़िम्मेदारी भी तेरी है</h3>
-      <p class="poem-body">किसी भी चीज़ का मैं पूरा मालिक नहीं,<br>
+      <h3 class="poem-title lang-hi">ज़िम्मेदारी भी तेरी है</h3>
+      <h3 class="poem-title lang-en">Zimmedari Bhi Teri Hai</h3>
+      <p class="poem-body lang-hi">किसी भी चीज़ का मैं पूरा मालिक नहीं,<br>
       मेरी हर एक चीज़ पर हक़ तेरा भी है...<br><br>
       मेरे सारे शब्दों में घुली तेरी ही मिठास है,<br>
       लिखने की कला भले मेरी है...<br><br>
       और तुझसे ही शुरू मेरी मोहब्बत की हर एक शायरी,<br>
       तो शायरी अच्छी हो ये ज़िम्मेदारी भी तेरी है...</p>
+      <p class="poem-body lang-en">Koi bhi cheez ka main poora malik nahi,<br>
+      Meri har ek cheez par haq tera bhi hai...<br><br>
+      Mere saare shabdon mein ghuli teri hi mithaas hai,<br>
+      Likhne ki kala bhale meri hai..<br><br>
+      Aur tujhse hi shuru meri mohabbat ki har ek shayari,<br>
+      Toh shayari achhi ho ye zimmedari bhi teri hai...</p>
       <div class="poem-actions">
         <button class="share-btn" data-poem="poem-16">शेयर करें ⤴</button>
         <button class="like-btn" data-poem="poem-16" aria-label="पसंद करें"><span class="heart">🤍</span> <span class="like-count">···</span></button>
@@ -416,8 +523,9 @@
         <span class="poem-category">ज़िंदगी</span>
         <p class="poem-date">१ अगस्त</p>
       </div>
-      <h3 class="poem-title">निभाना आना चाहिए</h3>
-      <p class="poem-body">मोहब्बत दिखाना लाज़मी नहीं,<br>
+      <h3 class="poem-title lang-hi">निभाना आना चाहिए</h3>
+      <h3 class="poem-title lang-en">Nibhaana Aana Chahiye</h3>
+      <p class="poem-body lang-hi">मोहब्बत दिखाना लाज़मी नहीं,<br>
       उसे निभाना आना चाहिए...<br><br>
       जान देने की बात करना ये फ़िज़ूल बातें हैं,<br>
       असल में तो बस सुख-दुख बाँटना आना चाहिए...<br><br>
@@ -427,6 +535,16 @@
       तो किसी दूसरे के हिस्से का बेहतर इंसान तुम्हें भी तो बनना आना चाहिए...<br><br>
       और चाहत रोशनी की रखना ग़लत बात नहीं है,<br>
       पर तुम्हें रोशनी के तले अँधेरे को भी अपनाना आना चाहिए...</p>
+      <p class="poem-body lang-en">Mohabbat dikhaana laazmi nahi,<br>
+      Use nibhaana aana chahiye...<br><br>
+      Jaan dene ki baat karna ye fizool baatein hain,<br>
+      Asal mein toh bas sukh-dukh baantna aana chahiye...<br><br>
+      Har kisi ki kahani ek si nahi hoti,<br>
+      Tumhein kam se kam apni kahani ka sahi kirdaar banna aana chahiye..<br><br>
+      Har kisi ko behtar insaan chahiye hota hai,<br>
+      Toh kisi dusre ke hisse ka behtar insaan tumhein bhi toh banna aana chahiye..<br><br>
+      Aur chahat roshni ki rakhna galat baat nahi hai,<br>
+      Par tumhein roshni ke tale andhere ko bhi apnaana aana chahiye...</p>
       <div class="poem-actions">
         <button class="share-btn" data-poem="poem-17">शेयर करें ⤴</button>
         <button class="like-btn" data-poem="poem-17" aria-label="पसंद करें"><span class="heart">🤍</span> <span class="like-count">···</span></button>
@@ -443,11 +561,16 @@
         <span class="poem-category">दर्द-ए-दिल</span>
         <p class="poem-date">१ अगस्त</p>
       </div>
-      <h3 class="poem-title">दो पहलू</h3>
-      <p class="poem-body">सारी लिखावट सारे अल्फ़ाज़ झूठे निकले,<br>
+      <h3 class="poem-title lang-hi">दो पहलू</h3>
+      <h3 class="poem-title lang-en">Do Pehlu</h3>
+      <p class="poem-body lang-hi">सारी लिखावट सारे अल्फ़ाज़ झूठे निकले,<br>
       मोहब्बत और बेवफ़ाई ये दोनों एक ही अर्थ के दो पहलू निकले...<br><br>
       जिसने निभाया उसने मोहब्बत को समझा,<br>
       और जो न निभा पाए वो बेवफ़ाई कर निकले...</p>
+      <p class="poem-body lang-en">Saari likhawat saare alfaaz jhoothe nikle,<br>
+      Mohabbat aur bewafai ye dono ek hi arth ke do pehlu nikle...<br><br>
+      Jisne nibhaya usne mohabbat ko samjha,<br>
+      Aur jo na nibha paaye wo bewafai kar nikle...</p>
       <div class="poem-actions">
         <button class="share-btn" data-poem="poem-18">शेयर करें ⤴</button>
         <button class="like-btn" data-poem="poem-18" aria-label="पसंद करें"><span class="heart">🤍</span> <span class="like-count">···</span></button>
@@ -464,11 +587,16 @@
         <span class="poem-category">ज़िंदगी</span>
         <p class="poem-date">१ अगस्त</p>
       </div>
-      <h3 class="poem-title">ग़लत समझे जाने का डर</h3>
-      <p class="poem-body">मैं डरता हूं कि मुझे ग़लत समझा जाएगा,<br>
+      <h3 class="poem-title lang-hi">ग़लत समझे जाने का डर</h3>
+      <h3 class="poem-title lang-en">Galat Samjhe Jaane Ka Dar</h3>
+      <p class="poem-body lang-hi">मैं डरता हूं कि मुझे ग़लत समझा जाएगा,<br>
       बेमतलब मेरी बातों का अलग मतलब निकाला जाएगा...<br><br>
       सुकून, शांति और सरलता अपनाना आसान नहीं,<br>
       पर जो अपना लिया तो सारी चीज़ों का डर निकल जाएगा...</p>
+      <p class="poem-body lang-en">Main darta hoon ki mujhe galat samjha jayega,<br>
+      Bematlab meri baaton ka alag matlab nikala jayega...<br><br>
+      Sukoon, shanti aur saralta apnaana aasan nahi,<br>
+      Par jo apna liya toh saari cheezon ka dar nikal jayega..</p>
       <div class="poem-actions">
         <button class="share-btn" data-poem="poem-19">शेयर करें ⤴</button>
         <button class="like-btn" data-poem="poem-19" aria-label="पसंद करें"><span class="heart">🤍</span> <span class="like-count">···</span></button>
@@ -485,8 +613,9 @@
         <span class="poem-category">ज़िंदगी</span>
         <p class="poem-date">१ अगस्त</p>
       </div>
-      <h3 class="poem-title">तू शेर है</h3>
-      <p class="poem-body">समय लग रहा है..? कोई बात नहीं...<br>
+      <h3 class="poem-title lang-hi">तू शेर है</h3>
+      <h3 class="poem-title lang-en">Tu Sher Hai</h3>
+      <p class="poem-body lang-hi">समय लग रहा है..? कोई बात नहीं...<br>
       मज़ाक बना रहे हैं लोग..? कोई बात नहीं...<br>
       उलझा सा सब लगता है..? कोई बात नहीं...<br>
       रोना चाहते हो..? कोई बात नहीं...<br>
@@ -497,6 +626,17 @@
       सारी चीज़ें संभल जाएंगी...<br><br>
       और आख़िर में क्या होगा पता है..?<br>
       तुझे सारी ख़ुशियां सारी सफलताएं मिल जाएंगी...</p>
+      <p class="poem-body lang-en">Samay lag raha hai..? Koi baat nahi...<br>
+      Mazak bana rahe hain log...? Koi baat nahi...<br>
+      Uljha sa sab lagta hai..? Koi baat nahi...<br>
+      Rona chahte ho..? Koi baat nahi...<br>
+      Saari cheezein jo tum mehsoos kar rahe ho wahin se toh tumhari jeet ki shuruaat hai...<br><br>
+      Mann uth raha hai..? Mat uthne do...<br>
+      Kahin bhaagne ka mann kar raha hai..? Samna karo..<br>
+      Tu haan tu sher hai, tike reh, date reh,<br>
+      Saari cheezein sambhal jaayengi...<br><br>
+      Aur aakhir mein kya hoga pata hai..?<br>
+      Tujhe saari khushiyan saari safaltaayein mil jaayengi..</p>
       <div class="poem-actions">
         <button class="share-btn" data-poem="poem-20">शेयर करें ⤴</button>
         <button class="like-btn" data-poem="poem-20" aria-label="पसंद करें"><span class="heart">🤍</span> <span class="like-count">···</span></button>
@@ -513,8 +653,9 @@
         <span class="poem-category">दर्द-ए-दिल</span>
         <p class="poem-date">१ अगस्त</p>
       </div>
-      <h3 class="poem-title">ग़ैर हुआ मैं</h3>
-      <p class="poem-body">तुमने चाहा सो हुआ,<br>
+      <h3 class="poem-title lang-hi">ग़ैर हुआ मैं</h3>
+      <h3 class="poem-title lang-en">Gair Hua Main</h3>
+      <p class="poem-body lang-hi">तुमने चाहा सो हुआ,<br>
       मैं ख़ुश था और देखो पल भर में तबाह हुआ...<br><br>
       ग़ैर को तुम बनाते रहे अपना,<br>
       और पता नहीं चला इस बीच कैसे मैं ग़ैर हुआ 😢,<br><br>
@@ -523,6 +664,15 @@
       तेरी ख़ुशियों को मैं अपनी ख़ुशी मानता था,<br>
       अब तेरे दिए इस दुख को कैसे संभालूं,<br>
       मैं तो तुझे ही अपना सब कुछ मानता था ❤️‍🩹</p>
+      <p class="poem-body lang-en">Tumne chaha so hua,<br>
+      Main khush tha aur dekho pal bhar mein tabaah hua..<br><br>
+      Gair ko tum banate rahe apna,<br>
+      Aur pata nahi chala is beech kaise main gair hua 😢,<br><br>
+      Kya galti meri thi..? Ya tu paap kar baithi hai..?<br>
+      Khair jo bhi ho tu mujhe ab gawa baithi hai...<br><br>
+      Teri khushiyon ko main apni khushi maanta tha,<br>
+      Ab tere diye is dukh ko kaise sambhaloon,<br>
+      Main toh tujhe hi apna sab kuch maanta tha ❤️‍🩹</p>
       <div class="poem-actions">
         <button class="share-btn" data-poem="poem-21">शेयर करें ⤴</button>
         <button class="like-btn" data-poem="poem-21" aria-label="पसंद करें"><span class="heart">🤍</span> <span class="like-count">···</span></button>
@@ -539,13 +689,20 @@
         <span class="poem-category">दर्द-ए-दिल</span>
         <p class="poem-date">१ अगस्त</p>
       </div>
-      <h3 class="poem-title">थक गया हूं</h3>
-      <p class="poem-body">सोचूं तो मुझसा कोई नहीं यहां,<br>
+      <h3 class="poem-title lang-hi">थक गया हूं</h3>
+      <h3 class="poem-title lang-en">Thak Gaya Hoon</h3>
+      <p class="poem-body lang-hi">सोचूं तो मुझसा कोई नहीं यहां,<br>
       पर सच्चाई ये है कि मैं ख़ुद जैसा रहते-रहते थक गया हूं...<br><br>
       कोई सवारने वाला मिले तो मैं भी बहकूं,<br>
       गुमराह मुसाफ़िरों को राह दिखाते-दिखाते मैं अब थक गया हूं..❤️‍🩹<br><br>
       और सुनना न चाहे जब कोई मेरा दुखड़ा तो मैं सुनाऊं,<br>
       उकताए लोगों को सुनते-सुनते मैं थक गया हूं...</p>
+      <p class="poem-body lang-en">Sochoon toh mujhsa koi nahi yahan,<br>
+      Par sachchai ye hai ki main khud jaisa rehte-rehte thak gaya hoon...<br><br>
+      Koi sawaarne wala mile toh main bhi behkoon,<br>
+      Gumraah musafiron ko raah dikhate-dikhate main ab thak gaya hoon..❤️‍🩹<br><br>
+      Aur sunna na chahe jab koi mera dukhda toh main sunaoon,<br>
+      Uktaaye logon ko sunte-sunte main thak gaya hoon...</p>
       <div class="poem-actions">
         <button class="share-btn" data-poem="poem-22">शेयर करें ⤴</button>
         <button class="like-btn" data-poem="poem-22" aria-label="पसंद करें"><span class="heart">🤍</span> <span class="like-count">···</span></button>
